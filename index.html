@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Priscila Studio — Plano de Negócio 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --p1:#6C63FF;--p1l:#EEEDFE;--p1d:#3C3489;
+  --p2:#FF6B6B;--p2l:#FFEFEF;--p2d:#A32D2D;
+  --p3:#00C896;--p3l:#E1F5EE;--p3d:#085041;
+  --p4:#FF9F43;--p4l:#FAEEDA;--p4d:#633806;
+  --p5:#4FC3F7;--p5l:#E6F1FB;--p5d:#0C447C;
+  --ink:#1A1714;--ink2:#4A4540;--ink3:#8A837C;
+  --surf:#FDFCFA;--surf2:#F5F2EE;--surf3:#EDE9E3;
+  --bdr:rgba(0,0,0,0.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--surf);color:var(--ink);min-height:100vh}
+.wrap{max-width:900px;margin:0 auto;padding:0 0 5rem}
+
+/* HEADER */
+.hdr{padding:3rem 2.5rem 2.25rem;border-bottom:1px solid var(--bdr);position:relative;overflow:hidden;background:var(--surf)}
+.hdr-bg{position:absolute;top:-40px;right:-40px;width:280px;height:280px;background:#6C63FF;opacity:0.06;border-radius:50%}
+.hdr-bg2{position:absolute;bottom:-60px;right:100px;width:180px;height:180px;background:#FF6B6B;opacity:0.05;border-radius:50%}
+.eyebrow{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--p1);margin-bottom:0.6rem;display:flex;align-items:center;gap:6px}
+.htitle{font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:800;line-height:1.1;margin-bottom:0.4rem;color:var(--ink)}
+.htitle span{color:var(--p1)}
+.hsub{font-size:0.95rem;color:var(--ink3);font-weight:300;margin-bottom:1.5rem}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-size:12px;font-weight:500;padding:4px 12px;border-radius:100px;border:1px solid var(--bdr);color:var(--ink2);background:var(--surf2);display:flex;align-items:center;gap:5px}
+.pill.v{background:var(--p1l);color:var(--p1d);border-color:transparent}
+.pill.g{background:var(--p3l);color:var(--p3d);border-color:transparent}
+.pill.o{background:var(--p4l);color:var(--p4d);border-color:transparent}
+
+/* NAV */
+.nav-wrap{position:sticky;top:0;z-index:100;background:rgba(253,252,250,0.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--bdr)}
+.nav{padding:0 1.5rem;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nbtn{font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:500;color:var(--ink3);background:none;border:none;padding:0.85rem 0.75rem;cursor:pointer;white-space:nowrap;border-bottom:2.5px solid transparent;transition:all 0.18s;display:flex;align-items:center;gap:5px}
+.nbtn i{font-size:15px}
+.nbtn:hover{color:var(--ink)}
+.nbtn.on{color:var(--p1);border-bottom-color:var(--p1);font-weight:600}
+
+/* SECTIONS */
+.sec{display:none;padding:2.5rem 2.5rem;animation:fadeIn 0.2s ease}
+.sec.on{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.slabel{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;color:var(--p1);margin-bottom:0.35rem;display:flex;align-items:center;gap:5px}
+.slabel i{font-size:14px}
+.stitle{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:var(--ink);margin-bottom:0.4rem;line-height:1.2}
+.sintro{font-size:0.9rem;color:var(--ink3);font-weight:300;line-height:1.7;margin-bottom:2rem;max-width:580px}
+.divider{height:1px;background:var(--bdr);margin:1.75rem 0}
+
+/* CARDS */
+.card{background:var(--surf2);border-radius:14px;padding:1.2rem 1.4rem;margin-bottom:0.85rem;border:1px solid var(--bdr)}
+.ctitle{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--ink);margin-bottom:0.5rem;text-transform:uppercase;letter-spacing:0.06em;display:flex;align-items:center;gap:6px}
+.ctitle i{font-size:16px;color:var(--p1)}
+.card p,.card li{font-size:13.5px;line-height:1.75;color:var(--ink2);font-weight:300}
+.card ul{padding-left:1.2rem}
+.card li{margin-bottom:0.2rem}
+
+/* HIGHLIGHT BOX */
+.hl{background:#6C63FF;border-radius:16px;padding:1.5rem 1.75rem;margin-bottom:1rem}
+.hl p{color:rgba(255,255,255,0.92);font-size:0.95rem;line-height:1.7;font-weight:300;font-style:italic}
+.hl .qm{font-family:'Syne',sans-serif;font-size:2.8rem;color:rgba(255,255,255,0.35);line-height:1;margin-bottom:0.2rem;display:block}
+
+/* PAIN CARDS */
+.pain-card{border-radius:14px;padding:1.2rem 1.4rem;margin-bottom:0.75rem;border-left:3px solid}
+.p1c{background:#FFF0F0;border-color:var(--p2)}
+.p2c{background:#FFF5EB;border-color:var(--p4)}
+.p3c{background:var(--p1l);border-color:var(--p1)}
+.p4c{background:#F0FFF8;border-color:var(--p3)}
+.plevel{font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:0.3rem;display:flex;align-items:center;gap:5px}
+.plevel i{font-size:14px}
+.p1c .plevel{color:var(--p2d)}.p2c .plevel{color:var(--p4d)}.p3c .plevel{color:var(--p1d)}.p4c .plevel{color:var(--p3d)}
+.pain-card h4{font-size:14px;font-weight:600;color:var(--ink);margin-bottom:0.35rem}
+.pain-card p{font-size:13.5px;color:var(--ink2);line-height:1.65;font-weight:300}
+
+/* NICHE GRID */
+.ngrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-bottom:1rem}
+.nc{background:var(--surf);border:1px solid var(--bdr);border-radius:12px;padding:1rem 1.15rem}
+.nc-icon{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:0.6rem;font-size:18px}
+.ic-p{background:var(--p1l);color:var(--p1)}.ic-r{background:var(--p2l);color:var(--p2d)}.ic-g{background:var(--p3l);color:var(--p3d)}.ic-o{background:var(--p4l);color:var(--p4d)}.ic-b{background:var(--p5l);color:var(--p5d)}
+.nc-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:0.3rem}
+.nc-why{font-size:12px;color:var(--ink3);line-height:1.5;font-weight:300}
+.tier-lbl{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:6px 0;margin-bottom:0.6rem;display:flex;align-items:center;gap:6px}
+.t1{color:var(--p1)}.t2{color:var(--p3d)}.t3{color:var(--ink3)}
+
+/* PRICE TABLE */
+.ptbl{width:100%;border-collapse:collapse;margin-bottom:1rem}
+.ptbl th{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink3);padding:0.5rem 0.9rem;text-align:left;border-bottom:1px solid var(--bdr)}
+.ptbl td{font-size:13.5px;padding:0.7rem 0.9rem;border-bottom:1px solid var(--bdr);color:var(--ink2);font-weight:300}
+.ptbl tr:last-child td{border-bottom:none}
+.ph{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:var(--p1)}
+
+/* PROJECTION */
+.proj-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1rem}
+.pj{background:var(--surf2);border-radius:14px;padding:1.1rem;text-align:center;border:1px solid var(--bdr)}
+.pj.feat{background:var(--p1);border-color:transparent}
+.pj-sc{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink3);margin-bottom:0.4rem;display:flex;align-items:center;justify-content:center;gap:4px}
+.pj-sc i{font-size:14px}
+.pj.feat .pj-sc{color:rgba(255,255,255,0.65)}
+.pj-n{font-family:'Syne',sans-serif;font-size:1.5rem;font-weight:800;color:var(--ink);margin-bottom:0.15rem}
+.pj.feat .pj-n{color:#fff}
+.pj-s{font-size:11.5px;color:var(--ink3);font-weight:300}
+.pj.feat .pj-s{color:rgba(255,255,255,0.65)}
+
+/* TOOL CARDS */
+.tool-card{background:var(--surf);border:1px solid var(--bdr);border-radius:12px;padding:1rem 1.2rem;margin-bottom:0.75rem;display:flex;gap:0.9rem;align-items:flex-start}
+.tico{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px}
+.tool-name{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:0.2rem;display:flex;align-items:center;gap:6px}
+.tool-name i{font-size:15px}
+.tool-desc{font-size:13px;color:var(--ink2);line-height:1.55;font-weight:300;margin-bottom:0.35rem}
+.tool-price{font-size:11.5px;font-weight:600;color:var(--p1)}
+
+/* FUNNEL */
+.fstep{display:flex;gap:0.9rem;align-items:flex-start;margin-bottom:1.2rem;position:relative}
+.fstep::before{content:'';position:absolute;left:16px;top:34px;width:2px;height:calc(100% + 0.2rem);background:var(--bdr)}
+.fstep:last-child::before{display:none}
+.snum{width:34px;height:34px;border-radius:50%;background:var(--p1);color:#fff;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;z-index:1}
+.sbody{padding-top:5px}
+.stit{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:0.25rem;display:flex;align-items:center;gap:5px}
+.stit i{font-size:15px;color:var(--p1)}
+.sdesc{font-size:13px;color:var(--ink2);line-height:1.65;font-weight:300}
+
+/* TIMELINE */
+.tl-row{display:flex;gap:10px;margin-bottom:1rem;flex-wrap:wrap}
+.tl-blk{flex:1;min-width:160px;background:var(--surf2);border-radius:12px;padding:1rem 1.15rem;border:1px solid var(--bdr)}
+.tl-per{font-size:11px;font-weight:600;color:var(--p1);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.35rem;display:flex;align-items:center;gap:4px}
+.tl-per i{font-size:14px}
+.tl-tit{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;color:var(--ink);margin-bottom:0.45rem}
+.tl-blk ul{padding-left:1rem}
+.tl-blk li{font-size:12px;color:var(--ink2);line-height:1.6;margin-bottom:0.15rem;font-weight:300}
+
+/* EMAIL */
+.email-box{background:var(--surf2);border:1px solid var(--bdr);border-radius:14px;overflow:hidden;margin-bottom:1rem}
+.email-hdr{background:var(--surf3);padding:0.7rem 1.2rem;border-bottom:1px solid var(--bdr)}
+.email-hdr p{font-size:12.5px;color:var(--ink2);margin-bottom:3px;display:flex;align-items:center;gap:5px}
+.email-hdr p i{font-size:14px;color:var(--p1)}
+.email-hdr strong{font-weight:600;color:var(--ink)}
+.email-body{padding:1.2rem}
+.email-body p{font-size:13.5px;color:var(--ink2);line-height:1.75;font-weight:300;margin-bottom:0.7rem}
+.email-body p:last-child{margin-bottom:0}
+
+/* AVATAR */
+.av-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:10px;margin-bottom:1rem}
+.av-item{background:var(--surf2);border-radius:12px;padding:1rem 1.15rem;border:1px solid var(--bdr)}
+.av-lbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.1em;color:var(--p1);margin-bottom:0.35rem;display:flex;align-items:center;gap:4px}
+.av-lbl i{font-size:14px}
+.av-val{font-size:13px;color:var(--ink2);line-height:1.6;font-weight:300}
+
+/* GROWTH */
+.gph{background:var(--surf2);border-radius:14px;padding:1.2rem 1.4rem;margin-bottom:0.75rem;border:1px solid var(--bdr);display:flex;gap:1rem;align-items:flex-start}
+.gbadge{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.07em;text-transform:uppercase;padding:4px 10px;border-radius:100px;white-space:nowrap;flex-shrink:0;margin-top:2px;display:flex;align-items:center;gap:4px}
+.gbadge i{font-size:13px}
+.gnow{background:var(--p1l);color:var(--p1d)}.gsoon{background:var(--p3l);color:var(--p3d)}.gfut{background:var(--surf3);color:var(--ink3)}
+.gtit{font-family:'Syne',sans-serif;font-size:13.5px;font-weight:700;color:var(--ink);margin-bottom:0.3rem}
+.gdesc{font-size:13.5px;color:var(--ink2);line-height:1.6;font-weight:300}
+
+/* TAGS */
+.tag-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:0.75rem}
+.tag{font-size:12px;font-weight:500;padding:4px 11px;border-radius:100px;border:1px solid var(--bdr);color:var(--ink2);background:var(--surf);display:flex;align-items:center;gap:4px}
+.tag i{font-size:13px}
+.tag.g{background:var(--p3l);color:var(--p3d);border-color:transparent}
+.tag.v{background:var(--p1l);color:var(--p1d);border-color:transparent}
+.tag.o{background:var(--p4l);color:var(--p4d);border-color:transparent}
+
+/* STATS */
+.stat-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(135px,1fr));gap:10px;margin-bottom:1.5rem}
+.stat{background:var(--surf2);border-radius:12px;padding:1rem;text-align:center;border:1px solid var(--bdr)}
+.stat-ico{font-size:22px;margin-bottom:0.35rem;display:flex;align-items:center;justify-content:center}
+.stat-n{font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--ink);margin-bottom:0.15rem}
+.stat-l{font-size:11.5px;color:var(--ink3);font-weight:300}
+
+/* INLINE SECTION TITLE */
+.inline-ctitle{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;display:flex;align-items:center;gap:6px;color:var(--ink);margin-bottom:0.75rem}
+.inline-ctitle i{color:var(--p1);font-size:16px}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+  .hdr{padding:2rem 1.25rem 1.5rem}
+  .sec{padding:1.75rem 1.25rem}
+  .htitle{font-size:1.8rem}
+  .proj-row{grid-template-columns:1fr}
+  .tl-row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HEADER -->
+<div class="hdr">
+  <div class="hdr-bg"></div><div class="hdr-bg2"></div>
+  <div class="eyebrow"><i class="ti ti-rocket"></i> Plano de Negócio · 2026</div>
+  <div class="htitle">Priscila <span>Studio</span></div>
+  <div class="hsub">Estratégia de expansão para o mercado norte-americano</div>
+  <div class="pills">
+    <span class="pill v"><i class="ti ti-world"></i> Mercado EUA</span>
+    <span class="pill g"><i class="ti ti-palette"></i> Design Digital</span>
+    <span class="pill o"><i class="ti ti-user"></i> Solo Studio</span>
+    <span class="pill"><i class="ti ti-calendar"></i> 2026</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <nav class="nav">
+    <button class="nbtn on" onclick="show('visao')"><i class="ti ti-eye"></i>Visão</button>
+    <button class="nbtn" onclick="show('pos')"><i class="ti ti-star"></i>Posicionamento</button>
+    <button class="nbtn" onclick="show('merc')"><i class="ti ti-chart-bar"></i>Mercado</button>
+    <button class="nbtn" onclick="show('avatar')"><i class="ti ti-user-circle"></i>Avatar</button>
+    <button class="nbtn" onclick="show('dores')"><i class="ti ti-heart-broken"></i>Dores</button>
+    <button class="nbtn" onclick="show('nichos')"><i class="ti ti-target"></i>Nichos</button>
+    <button class="nbtn" onclick="show('oferta')"><i class="ti ti-package"></i>Oferta</button>
+    <button class="nbtn" onclick="show('preco')"><i class="ti ti-currency-dollar"></i>Preços</button>
+    <button class="nbtn" onclick="show('prosp')"><i class="ti ti-radar"></i>Prospecção</button>
+    <button class="nbtn" onclick="show('copy')"><i class="ti ti-message"></i>Copy</button>
+    <button class="nbtn" onclick="show('funil')"><i class="ti ti-filter"></i>Funil</button>
+    <button class="nbtn" onclick="show('entrega')"><i class="ti ti-send"></i>Entrega</button>
+    <button class="nbtn" onclick="show('presenca')"><i class="ti ti-brand-instagram"></i>Presença</button>
+    <button class="nbtn" onclick="show('metas')"><i class="ti ti-trending-up"></i>Metas</button>
+    <button class="nbtn" onclick="show('cresc')"><i class="ti ti-plant"></i>Crescimento</button>
+  </nav>
+</div>
+
+<!-- 1 VISÃO -->
+<div id="visao" class="sec on">
+  <div class="slabel"><i class="ti ti-eye"></i> 01 · Visão Geral</div>
+  <div class="stitle">O que é o Priscila Studio</div>
+  <div class="sintro">Um estúdio solo de design estratégico voltado para criação e modernização de presença digital para pequenas e médias empresas nos Estados Unidos.</div>
+  <div class="hl"><span class="qm">"</span><p>Não entregamos apenas design. Entregamos uma oportunidade real de crescimento — porque acreditamos que cada negócio merece se apresentar ao mundo à altura do que realmente vale.</p></div>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-ico"><i class="ti ti-calendar" style="color:var(--p1);font-size:22px"></i></div><div class="stat-n">5 anos</div><div class="stat-l">de experiência</div></div>
+    <div class="stat"><div class="stat-ico"><i class="ti ti-world" style="color:var(--p2);font-size:22px"></i></div><div class="stat-n">100%</div><div class="stat-l">foco no mercado EUA</div></div>
+    <div class="stat"><div class="stat-ico"><i class="ti ti-palette" style="color:var(--p3);font-size:22px"></i></div><div class="stat-n">UX/UI</div><div class="stat-l">design estratégico</div></div>
+    <div class="stat"><div class="stat-ico"><i class="ti ti-rocket" style="color:var(--p4);font-size:22px"></i></div><div class="stat-n">Solo</div><div class="stat-l">com visão de escala</div></div>
+  </div>
+  <div class="card"><div class="ctitle"><i class="ti ti-flag"></i>Missão</div><p>Ajudar pequenos e médios negócios americanos a se comunicarem visualmente de forma moderna, gerando mais confiança, mais clientes e mais crescimento.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-check"></i>O que oferecemos</div><ul><li>Design estratégico de sites e landing pages — criação do zero ou redesign</li><li>Criação de identidade visual e branding para novos negócios</li><li>UX/UI de produtos digitais com foco em experiência e conversão</li><li>Futuramente: desenvolvimento com Framer (em 3–6 meses)</li></ul></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-x"></i>O que não oferecemos (por ora)</div><ul><li>Desenvolvimento de código (front-end/back-end)</li><li>Hospedagem, domínio ou manutenção técnica</li><li>Gestão de redes sociais ou tráfego pago</li></ul></div>
+</div>
+
+<!-- 2 POSICIONAMENTO -->
+<div id="pos" class="sec">
+  <div class="slabel"><i class="ti ti-star"></i> 02 · Posicionamento</div>
+  <div class="stitle">Por que Priscila Studio?</div>
+  <div class="sintro">O diferencial vai além do visual. Está na forma como Priscila enxerga cada projeto — como uma oportunidade de transformar a realidade do negócio do cliente.</div>
+  <div class="hl"><span class="qm">"</span><p>Enquanto outros estúdios entregam um arquivo, Priscila entrega uma nova versão do seu negócio — mais confiante, mais moderna e mais preparada para crescer.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-heart"></i>Atendimento humanizado</div><p>Cordial, empático e totalmente dedicado a entender a essência do negócio do cliente antes de criar qualquer pixel. O sucesso do cliente é o sucesso do estúdio.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-award"></i>Experiência comprovada</div><p>5 anos de mercado com portfólio real de projetos entregues — resultado de dedicação ao sonho de cada cliente atendido.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-brush"></i>Design sob medida</div><p>Cada projeto segue as tendências do mercado e o perfil único da cultura de cada empresa — nunca um template genérico.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-trending-up"></i>Proposta única de valor</div><p>Design estratégico feito por quem realmente se importa com o crescimento do seu negócio — atendimento personalizado e resultado alinhado às últimas tendências do mercado.</p></div>
+</div>
+
+<!-- 3 MERCADO -->
+<div id="merc" class="sec">
+  <div class="slabel"><i class="ti ti-chart-bar"></i> 03 · Análise de Mercado</div>
+  <div class="stitle">A oportunidade americana</div>
+  <div class="sintro">Os EUA representam um dos maiores mercados para serviços de design digital — e grande parte das pequenas empresas ainda está digitalmente defasada.</div>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-ico"><i class="ti ti-building-store" style="color:var(--p1);font-size:22px"></i></div><div class="stat-n">33M+</div><div class="stat-l">pequenas empresas nos EUA</div></div>
+    <div class="stat"><div class="stat-ico"><i class="ti ti-currency-dollar" style="color:var(--p3);font-size:22px"></i></div><div class="stat-n">$40B</div><div class="stat-l">mercado de web design/ano</div></div>
+    <div class="stat"><div class="stat-ico"><i class="ti ti-alert-circle" style="color:var(--p2);font-size:22px"></i></div><div class="stat-n">50%+</div><div class="stat-l">sites desatualizados ou inexistentes</div></div>
+  </div>
+  <div class="card"><div class="ctitle"><i class="ti ti-door-enter"></i>A janela de oportunidade</div><ul><li>Pós-pandemia: negócios locais entenderam que presença digital não é opcional</li><li>Ferramentas como Wix criaram sites genéricos — há espaço enorme para design personalizado</li><li>Empresas insatisfeitas com soluções baratas estão abertas a algo melhor</li><li>$500–600 por landing page é acessível para a maioria dos negócios locais americanos</li></ul></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-trophy"></i>Posição competitiva</div><ul><li><strong>Freelancers americanos:</strong> cobram $1.000–5.000 por projeto</li><li><strong>Agências:</strong> inacessíveis para pequenas empresas, tickets altíssimos</li><li><strong>DIY (Wix, Squarespace):</strong> resultado genérico, sem estratégia</li><li><strong>Priscila Studio:</strong> qualidade de agência, agilidade de freelancer, preço competitivo</li></ul></div>
+</div>
+
+<!-- 4 AVATAR -->
+<div id="avatar" class="sec">
+  <div class="slabel"><i class="ti ti-user-circle"></i> 04 · Avatar do Cliente Ideal</div>
+  <div class="stitle">Quem é o cliente perfeito</div>
+  <div class="sintro">Dois perfis principais — o dono que decide tudo e o responsável de marketing que precisa justificar o investimento.</div>
+  <div class="card"><div class="ctitle"><i class="ti ti-user"></i>Perfil A — O Dono Solo</div>
+    <div class="av-grid" style="margin-top:0.75rem">
+      <div class="av-item"><div class="av-lbl"><i class="ti ti-id"></i>Quem é</div><div class="av-val">Dono de pequeno negócio local, 35–55 anos, decididor único</div></div>
+      <div class="av-item"><div class="av-lbl"><i class="ti ti-activity"></i>Situação</div><div class="av-val">Negócio funcionando, clientes antigos, mas sem crescimento novo</div></div>
+      <div class="av-item"><div class="av-lbl"><i class="ti ti-brain"></i>Comportamento</div><div class="av-val">Focado na operação, negligencia o marketing digital</div></div>
+      <div class="av-item"><div class="av-lbl"><i class="ti ti-bolt"></i>Gatilho</div><div class="av-val">Ver concorrente crescendo ou receber feedback negativo sobre o site</div></div>
+    </div>
+  </div>
+  <div class="card"><div class="ctitle"><i class="ti ti-users"></i>Perfil B — Responsável de Marketing</div>
+    <div class="av-grid" style="margin-top:0.75rem">
+      <div class="av-item"><div class="av-lbl"><i class="ti ti-id"></i>Quem é</div><div class="av-val">Funcionário de média empresa, 28–42 anos, precisa justificar ROI</div></div>
+      <div class="av-item"><div class="av-lbl"><i class="ti ti-activity"></i>Situação</div><div class="av-val">Site desatualizado sendo problema recorrente nas reuniões</div></div>
+      <div class="av-item"><div class="av-lbl"><i class="ti ti-brain"></i>Comportamento</div><div class="av-val">Pesquisa opções, compara, precisa de proposta formal</div></div>
+      <div class="av-item"><div class="av-lbl"><i class="ti ti-bolt"></i>Gatilho</div><div class="av-val">Receber meta de aumentar conversões ou modernizar a marca</div></div>
+    </div>
+  </div>
+  <div class="card"><div class="ctitle"><i class="ti ti-heart"></i>O que esse cliente valoriza</div><ul><li>Resultado visível e rápido — não quer processo longo e burocrático</li><li>Comunicação clara e frequente ao longo do projeto</li><li>Sentir que o designer entende o negócio, não só o design</li><li>Preço justo com entrega profissional e portfólio para conferir</li></ul></div>
+</div>
+
+<!-- 5 DORES -->
+<div id="dores" class="sec">
+  <div class="slabel"><i class="ti ti-heart-broken"></i> 05 · Mapa de Dores</div>
+  <div class="stitle">O que esse cliente sente</div>
+  <div class="sintro">As dores operam em quatro camadas — da mais óbvia até a mais profunda. Entender cada camada é a chave para uma comunicação que realmente converte.</div>
+  <div class="pain-card p1c"><div class="plevel"><i class="ti ti-circle-1"></i>Dor Primária · Óbvia e consciente</div><h4>Estagnação nos negócios</h4><p>O cliente percebe que seu negócio não cresce. Tem os mesmos clientes de sempre, o faturamento oscila mas nunca sobe de verdade. Sabe que algo está errado, mas não consegue nomear o quê.</p></div>
+  <div class="pain-card p2c"><div class="plevel"><i class="ti ti-circle-2"></i>Dor Secundária · Sente mas não nomeia</div><h4>Não se vende como merece</h4><p>O mercado evoluiu, mas a aparência do negócio ficou para trás. O cliente não conecta o visual desatualizado com a falta de novos clientes — acha que é o nicho que "esfriou" ou que a concorrência ficou forte demais.</p></div>
+  <div class="pain-card p3c"><div class="plevel"><i class="ti ti-circle-3"></i>Dor Terciária · Impacto financeiro visível</div><h4>Perdendo fatia de mercado todos os dias</h4><p>Enquanto concorrentes com presença moderna atraem novas gerações, esse cliente fica invisível para quem pesquisa online. Está perdendo clientes em tempo real por não estar se comunicando corretamente.</p></div>
+  <div class="pain-card p4c"><div class="plevel"><i class="ti ti-circle-4"></i>Dor Profunda · Medo existencial</div><h4>O medo de ficar irrelevante</h4><p>No fundo, tem medo de que o negócio que construiu com tanto esforço se torne obsoleto. Que um dia os clientes antigos parem de vir, as novas gerações nunca cheguem, e não haja mais nada para sustentar o que construiu.</p></div>
+  <div class="hl" style="margin-top:1.5rem"><span class="qm">"</span><p>A mensagem mais poderosa para esse cliente não é "eu faço sites bonitos" — é "você está perdendo clientes agora, e eu posso te ajudar a mudar isso."</p></div>
+</div>
+
+<!-- 6 NICHOS -->
+<div id="nichos" class="sec">
+  <div class="slabel"><i class="ti ti-target"></i> 06 · Nichos de Atuação</div>
+  <div class="stitle">Onde encontrar os melhores clientes</div>
+  <div class="sintro">Selecionados com base em: alta ocorrência nos EUA, capacidade financeira para investir e presença digital visivelmente defasada.</div>
+  <div class="tier-lbl t1"><i class="ti ti-medal"></i> Tier 1 — Começar aqui</div>
+  <div class="ngrid">
+    <div class="nc"><div class="nc-icon ic-p"><i class="ti ti-tooth"></i></div><div class="nc-name">Clínicas odontológicas</div><div class="nc-why">Paciente pesquisa antes de marcar — site ruim = clínica não confiável. Alta margem, decisão rápida.</div></div>
+    <div class="nc"><div class="nc-icon ic-r"><i class="ti ti-scissors"></i></div><div class="nc-name">Salões e Spas</div><div class="nc-why">Negócio 100% visual — site feio contradiz o serviço. Cliente valoriza estética acima de tudo.</div></div>
+    <div class="nc"><div class="nc-icon ic-o"><i class="ti ti-tool"></i></div><div class="nc-name">Serviços locais</div><div class="nc-why">Encanadores, eletricistas, HVAC — faturam bem mas site parece amador. Altíssima ocorrência.</div></div>
+    <div class="nc"><div class="nc-icon ic-g"><i class="ti ti-paw"></i></div><div class="nc-name">Pet shops e veterinários</div><div class="nc-why">Mercado em explosão nos EUA. Dono de pet é exigente — confiança visual importa muito.</div></div>
+    <div class="nc"><div class="nc-icon ic-b"><i class="ti ti-barbell"></i></div><div class="nc-name">Academias e Personal</div><div class="nc-why">Mercado saturado pós-pandemia — quem tem melhor presença digital se destaca.</div></div>
+    <div class="nc"><div class="nc-icon ic-p"><i class="ti ti-home"></i></div><div class="nc-name">Serviços de limpeza</div><div class="nc-why">Enorme mercado nos EUA, alta concorrência — quem tem site melhor ganha o cliente.</div></div>
+  </div>
+  <div class="divider"></div>
+  <div class="tier-lbl t2"><i class="ti ti-medal-2"></i> Tier 2 — Forte potencial de redesign</div>
+  <div class="ngrid">
+    <div class="nc"><div class="nc-icon ic-p"><i class="ti ti-gavel"></i></div><div class="nc-name">Advogados solo</div><div class="nc-why">Credibilidade é tudo — site amador afasta clientes de alto valor.</div></div>
+    <div class="nc"><div class="nc-icon ic-o"><i class="ti ti-building"></i></div><div class="nc-name">Corretores independentes</div><div class="nc-why">Vendem imóveis caros com site barato — contradição gritante.</div></div>
+    <div class="nc"><div class="nc-icon ic-g"><i class="ti ti-stethoscope"></i></div><div class="nc-name">Clínicas médicas e estéticas</div><div class="nc-why">Paciente julga qualidade pelo visual — setor em expansão constante.</div></div>
+    <div class="nc"><div class="nc-icon ic-b"><i class="ti ti-hard-hat"></i></div><div class="nc-name">Empreiteiros locais</div><div class="nc-why">Trabalho de alto valor — sem portfólio no site, sem contrato fechado.</div></div>
+    <div class="nc"><div class="nc-icon ic-r"><i class="ti ti-school"></i></div><div class="nc-name">Tutores e escolas pequenas</div><div class="nc-why">Pais pesquisam antes de confiar o filho — site precisa transmitir seriedade.</div></div>
+    <div class="nc"><div class="nc-icon ic-o"><i class="ti ti-car"></i></div><div class="nc-name">Oficinas mecânicas</div><div class="nc-why">Alta ocorrência, donos técnicos que negligenciam presença digital.</div></div>
+    <div class="nc"><div class="nc-icon ic-g"><i class="ti ti-chef-hat"></i></div><div class="nc-name">Restaurantes e cafés</div><div class="nc-why">Cliente decide pelo visual antes de ir — site antigo resulta em mesa vazia.</div></div>
+    <div class="nc"><div class="nc-icon ic-p"><i class="ti ti-brain"></i></div><div class="nc-name">Coaches e consultores</div><div class="nc-why">Vendem transformação pessoal — o site precisa refletir isso visualmente.</div></div>
+  </div>
+</div>
+
+<!-- 7 OFERTA -->
+<div id="oferta" class="sec">
+  <div class="slabel"><i class="ti ti-package"></i> 07 · Oferta & Pacotes</div>
+  <div class="stitle">O que Priscila Studio entrega</div>
+  <div class="sintro">Três cenários de atendimento, cada um adaptado ao momento e à necessidade do cliente.</div>
+  <div class="card"><div class="ctitle"><i class="ti ti-refresh"></i>Cenário 1 — Redesign (marca existente)</div><p>Para clientes que já têm identidade visual e querem modernizar sem perder a essência. Priscila recebe o briefing, analisa a cultura do negócio e recria o site com olhar completamente atual.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-sparkles"></i>Cenário 2 — Renovação completa</div><p>Para clientes que desejam uma nova identidade completa. Paleta de cores, tipografia, linguagem visual e estrutura das páginas são totalmente repensados. Ideal para negócios que evoluíram mas a imagem ficou para trás.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-plus"></i>Cenário 3 — Criação do zero (novo negócio)</div><p>Para empreendedores começando do zero: branding, identidade visual, logomarca e site. Priscila acompanha desde a personalidade da marca até a entrega das páginas prontas.</p></div>
+  <div class="divider"></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-check"></i>Incluído em todos os projetos</div><ul><li>Análise do negócio e briefing detalhado</li><li>Design estratégico alinhado às tendências do mercado</li><li>Landing page principal + páginas adicionais conforme necessidade</li><li>3 a 4 rodadas de revisão para alinhamento progressivo</li><li>Entrega via Figma (link interativo) ou PDF em alta qualidade</li></ul></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-x"></i>Não incluído</div><ul><li>Desenvolvimento de código ou implementação técnica</li><li>Hospedagem, domínio ou manutenção técnica</li><li>Gestão de conteúdo ou redes sociais</li></ul></div>
+</div>
+
+<!-- 8 PREÇOS -->
+<div id="preco" class="sec">
+  <div class="slabel"><i class="ti ti-currency-dollar"></i> 08 · Precificação</div>
+  <div class="stitle">Tabela de preços</div>
+  <div class="sintro">Preços competitivos para o mercado americano — muito abaixo das agências locais, com qualidade equivalente.</div>
+  <table class="ptbl">
+    <thead><tr><th><i class="ti ti-layout" style="vertical-align:-2px;margin-right:5px"></i>Serviço</th><th><i class="ti ti-tag" style="vertical-align:-2px;margin-right:5px"></i>Valor</th><th>Observação</th></tr></thead>
+    <tbody>
+      <tr><td>Landing Page principal</td><td><span class="ph">$500 – $600</span></td><td>Página principal do site</td></tr>
+      <tr><td>Página adicional</td><td><span class="ph">$100 – $150</span></td><td>Cada página extra além da principal</td></tr>
+      <tr><td>Identidade visual / Branding</td><td><span class="ph">A definir</span></td><td>Logomarca, paleta, tipografia</td></tr>
+    </tbody>
+  </table>
+  <div class="card"><div class="ctitle"><i class="ti ti-credit-card"></i>Modelo de pagamento</div><p>50% no início do projeto · 50% na entrega final. Protege ambas as partes e garante comprometimento mútuo desde o primeiro dia.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-scale"></i>Comparativo de mercado</div><ul><li>Freelancers americanos: $1.000 – $5.000 por projeto</li><li>Agências locais: $5.000 – $20.000+</li><li>Plataformas DIY: genérico, sem estratégia</li><li><strong>Priscila Studio: qualidade de agência, preço acessível</strong></li></ul></div>
+</div>
+
+<!-- 9 PROSPECÇÃO -->
+<div id="prosp" class="sec">
+  <div class="slabel"><i class="ti ti-radar"></i> 09 · Estratégia de Prospecção</div>
+  <div class="stitle">Como chegar nos clientes certos</div>
+  <div class="sintro">Dois caminhos complementares: o manual para validar e o automatizado para escalar.</div>
+  <div class="card"><div class="ctitle"><i class="ti ti-hand"></i>Caminho 1 — Manual (validação inicial)</div><p style="margin-bottom:0.6rem">Ideal para os primeiros 10–20 clientes. Permite personalização máxima e ajuda a entender quais nichos e abordagens convertem melhor antes de investir em automação.</p><ul><li>Buscar no Google Maps: nicho + cidade (ex: "dentist Austin TX")</li><li>Avaliar o site de cada resultado e identificar os desatualizados</li><li>Encontrar o contato do dono via LinkedIn ou Apollo.io</li><li>Registrar tudo em planilha por nicho e cidade</li><li>Enviar cold email personalizado</li></ul></div>
+  <div class="divider"></div>
+  <div class="inline-ctitle"><i class="ti ti-robot"></i>Caminho 2 — Ferramentas de automação</div>
+  <div class="tool-card"><div class="tico ic-p"><i class="ti ti-map-pin"></i></div><div><div class="tool-name"><i class="ti ti-brand-google"></i>Outscraper</div><div class="tool-desc">Extrai dados em massa do Google Maps filtrando por nicho e região. Gera listas com nome, telefone e site — perfeito para identificar negócios com site desatualizado em escala.</div><div class="tool-price"><i class="ti ti-tag" style="font-size:12px"></i> ~$30–50/mês · Recomendado como ponto de partida</div></div></div>
+  <div class="tool-card"><div class="tico ic-b"><i class="ti ti-user-search"></i></div><div><div class="tool-name"><i class="ti ti-rocket"></i>Apollo.io</div><div class="tool-desc">Banco de dados de contatos profissionais. Encontra o email e LinkedIn do dono do negócio diretamente — essencial para não ficar preso em emails genéricos.</div><div class="tool-price"><i class="ti ti-tag" style="font-size:12px"></i> Plano gratuito disponível</div></div></div>
+  <div class="tool-card"><div class="tico ic-g"><i class="ti ti-search"></i></div><div><div class="tool-name"><i class="ti ti-list-search"></i>D7 Lead Finder</div><div class="tool-desc">Especializado em negócios locais. Mostra qualidade do site atual — facilita identificar quem realmente precisa de redesign sem visitar cada site manualmente.</div><div class="tool-price"><i class="ti ti-tag" style="font-size:12px"></i> ~$30/mês</div></div></div>
+  <div class="tool-card"><div class="tico ic-o"><i class="ti ti-bolt"></i></div><div><div class="tool-name"><i class="ti ti-ghost"></i>PhantomBuster</div><div class="tool-desc">Automatiza extração do Google Maps e LinkedIn. Cria sequências de prospecção semi-automáticas — ideal para quando o volume de leads aumentar.</div><div class="tool-price"><i class="ti ti-tag" style="font-size:12px"></i> ~$60/mês · Para fase de escala</div></div></div>
+  <div class="tool-card"><div class="tico ic-g"><i class="ti ti-plug"></i></div><div><div class="tool-name"><i class="ti ti-browser"></i>Instant Data Scraper</div><div class="tool-desc">Extensão gratuita para Chrome que extrai listas do Google Maps com um clique. Ótima para começar sem custo e validar o processo antes de ferramentas pagas.</div><div class="tool-price"><i class="ti ti-gift" style="font-size:12px"></i> 100% gratuito · Ideal para começar</div></div></div>
+  <div class="card" style="margin-top:0.5rem"><div class="ctitle"><i class="ti ti-stack"></i>Stack recomendado para começar</div><p>Instant Data Scraper (grátis) → Apollo.io (gratuito) → Planilha Google → Cold email manual personalizado. Custo inicial: zero.</p></div>
+</div>
+
+<!-- 10 COPY -->
+<div id="copy" class="sec">
+  <div class="slabel"><i class="ti ti-message"></i> 10 · Copy & Comunicação</div>
+  <div class="stitle">A mensagem que converte</div>
+  <div class="sintro">Tom empático, direto e consultivo. Priscila não vende — ela apresenta uma oportunidade que o cliente ainda não viu.</div>
+  <div class="card"><div class="ctitle"><i class="ti ti-microphone"></i>Tom de voz</div><div class="tag-row" style="margin-top:0.5rem"><span class="tag v"><i class="ti ti-heart"></i>Empático</span><span class="tag g"><i class="ti ti-target"></i>Direto</span><span class="tag o"><i class="ti ti-school"></i>Consultivo</span></div><p>A combinação dos três tons cria uma abordagem que gera confiança imediata — o cliente sente que está falando com um parceiro, não com um vendedor.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-quote"></i>A mensagem central do estúdio</div><p style="font-style:italic;font-size:15px;color:var(--p1d)">"You have a great business — but your website is making you look smaller than you are. And that's costing you customers every day."</p></div>
+  <div class="divider"></div>
+  <div class="inline-ctitle"><i class="ti ti-mail"></i>Modelo de Cold Email</div>
+  <div class="email-box">
+    <div class="email-hdr">
+      <p><i class="ti ti-mail"></i><strong>Assunto:</strong> Quick idea for [Business Name]'s website</p>
+      <p><i class="ti ti-user"></i><strong>Para:</strong> [Nome do dono]</p>
+    </div>
+    <div class="email-body">
+      <p>Hi [First Name],</p>
+      <p>I came across [Business Name] while looking for [niche] in [city] — you clearly do great work.</p>
+      <p>I noticed your website might not be showing that as well as it could. A lot of businesses in your space are losing potential customers before they even make contact, simply because their online presence doesn't match the quality of what they actually deliver.</p>
+      <p>I'm a designer specialized in helping small businesses like yours look the part online — and I'd love to show you a quick mockup of what your site could look like. No cost, no commitment.</p>
+      <p>Would you be open to taking a look?</p>
+      <p>Best,<br>Priscila<br>Priscila Studio</p>
+    </div>
+  </div>
+  <div class="card"><div class="ctitle"><i class="ti ti-eye"></i>A estratégia da prévia gratuita</div><p>Ao oferecer um mockup sem custo no primeiro contato, Priscila elimina o principal obstáculo — o risco percebido. O cliente vê o potencial real antes de qualquer compromisso financeiro, aumentando drasticamente a taxa de conversão.</p></div>
+</div>
+
+<!-- 11 FUNIL -->
+<div id="funil" class="sec">
+  <div class="slabel"><i class="ti ti-filter"></i> 11 · Funil de Vendas</div>
+  <div class="stitle">Da abordagem ao fechamento</div>
+  <div class="sintro">Um funil simples, humano e eficiente — projetado para converter sem pressão.</div>
+  <div class="fstep"><div class="snum">1</div><div class="sbody"><div class="stit"><i class="ti ti-search"></i>Identificação do lead</div><div class="sdesc">Empresa encontrada via Google Maps, Outscraper ou pesquisa manual. Site avaliado como desatualizado. Contato do dono localizado via Apollo.io ou LinkedIn.</div></div></div>
+  <div class="fstep"><div class="snum">2</div><div class="sbody"><div class="stit"><i class="ti ti-mail"></i>Primeiro contato — Cold Email</div><div class="sdesc">Email personalizado com tom empático e consultivo. Apresenta o problema de forma construtiva e oferece prévia gratuita do que o site poderia se tornar.</div></div></div>
+  <div class="fstep"><div class="snum">3</div><div class="sbody"><div class="stit"><i class="ti ti-eye"></i>Entrega da prévia gratuita</div><div class="sdesc">Priscila cria um mockup rápido mostrando o potencial do projeto. Entregue via PDF ou link Figma. Principal gatilho de conversão — o cliente vê o resultado antes de pagar.</div></div></div>
+  <div class="fstep"><div class="snum">4</div><div class="sbody"><div class="stit"><i class="ti ti-video"></i>Call de alinhamento (opcional)</div><div class="sdesc">Call rápida via Zoom para tirar dúvidas, entender melhor o negócio e apresentar o processo de trabalho. Priscila conduz em inglês com confiança.</div></div></div>
+  <div class="fstep"><div class="snum">5</div><div class="sbody"><div class="stit"><i class="ti ti-file-text"></i>Proposta e fechamento</div><div class="sdesc">Proposta enviada via PDF com escopo, prazo e valor. Pagamento de 50% para iniciar. Contrato simples para proteger ambas as partes.</div></div></div>
+  <div class="fstep"><div class="snum">6</div><div class="sbody"><div class="stit"><i class="ti ti-send"></i>Entrega e saldo final</div><div class="sdesc">Projeto entregue via Figma ou PDF após revisões. Pagamento dos 50% restantes na entrega final aprovada. Solicitação de depoimento para construção de prova social.</div></div></div>
+</div>
+
+<!-- 12 ENTREGA -->
+<div id="entrega" class="sec">
+  <div class="slabel"><i class="ti ti-send"></i> 12 · Processo de Entrega</div>
+  <div class="stitle">Do briefing à entrega final</div>
+  <div class="sintro">Um processo claro que garante qualidade, alinhamento e uma experiência memorável para o cliente.</div>
+  <div class="card"><div class="ctitle"><i class="ti ti-clipboard-list"></i>Etapa 1 — Briefing e imersão</div><p>Coleta detalhada sobre o negócio, público, cultura da empresa, referências visuais e objetivos. Se o cliente já tem identidade visual, ela é analisada e respeitada como ponto de partida.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-pencil"></i>Etapa 2 — Criação e desenvolvimento</div><p>Design criado no Figma seguindo tendências do mercado, perfil do nicho e cultura da empresa. Cada elemento pensado estrategicamente para gerar confiança e conversão.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-arrows-exchange"></i>Etapa 3 — Revisões colaborativas</div><p>3 a 4 rodadas de revisão para alinhamento progressivo. Cada rodada aproxima o resultado da visão do cliente — sem pressa, sem atropelos.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-package-export"></i>Etapa 4 — Entrega final</div><p>Arquivos entregues via Figma (link interativo) ou PDF em alta qualidade. O cliente recebe tudo organizado e pronto para implementação.</p></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-tools"></i>Ferramentas utilizadas</div><div class="tag-row"><span class="tag v"><i class="ti ti-brand-figma"></i>Figma</span><span class="tag o"><i class="ti ti-file-type-pdf"></i>PDF</span><span class="tag g"><i class="ti ti-video"></i>Zoom</span><span class="tag"><i class="ti ti-mail"></i>Email</span></div></div>
+</div>
+
+<!-- 13 PRESENÇA -->
+<div id="presenca" class="sec">
+  <div class="slabel"><i class="ti ti-brand-instagram"></i> 13 · Presença Digital</div>
+  <div class="stitle">Como Priscila Studio se apresenta ao mundo</div>
+  <div class="sintro">O próprio estúdio precisa ser a melhor vitrine do trabalho — o cliente americano vai pesquisar antes de responder qualquer email.</div>
+  <div class="card"><div class="ctitle"><i class="ti ti-world"></i>Site do estúdio</div><ul><li>Já está online e em inglês — preparado para receber visitantes americanos</li><li>Portfólio real de projetos entregues para clientes anteriores</li><li>Prioridade: adicionar depoimentos assim que os primeiros clientes americanos forem atendidos</li></ul></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-brand-linkedin"></i>LinkedIn</div><ul><li>Perfil já ativo — canal principal de prospecção e credibilidade</li><li>Atualizar regularmente com projetos novos e conteúdo sobre design</li><li>Cultivar conexões com decisores dos nichos-alvo</li></ul></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-brand-instagram"></i>Instagram (próximos passos)</div><ul><li>Será ativado conforme os primeiros projetos americanos forem fechados</li><li>Foco em antes e depois de redesigns — conteúdo de alto impacto visual</li><li>Estratégia de conteúdo voltada para o público americano</li></ul></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-star"></i>Prova social — prioridade estratégica</div><p>Ao concluir cada projeto, solicitar depoimento escrito do cliente. Um depoimento real de um cliente americano satisfeito vale mais do que qualquer anúncio — esse ativo deve ser construído desde o primeiro projeto fechado.</p></div>
+</div>
+
+<!-- 14 METAS -->
+<div id="metas" class="sec">
+  <div class="slabel"><i class="ti ti-trending-up"></i> 14 · Metas & Projeção Financeira</div>
+  <div class="stitle">Os números do plano</div>
+  <div class="sintro">Projeção baseada em ticket médio de $550 por projeto e capacidade de entrega solo de Priscila.</div>
+  <div class="proj-row">
+    <div class="pj"><div class="pj-sc"><i class="ti ti-minus"></i>Conservador</div><div class="pj-n">$2.200</div><div class="pj-s">4 projetos/mês</div></div>
+    <div class="pj"><div class="pj-sc"><i class="ti ti-equal"></i>Moderado</div><div class="pj-n">$3.850</div><div class="pj-s">7 projetos/mês</div></div>
+    <div class="pj feat"><div class="pj-sc"><i class="ti ti-rocket"></i>Meta</div><div class="pj-n">$5.500</div><div class="pj-s">10 projetos/mês</div></div>
+  </div>
+  <div class="card"><div class="ctitle"><i class="ti ti-user"></i>Capacidade de entrega</div><ul><li>Fase inicial: 1–2 projetos por semana (4–8/mês)</li><li>Meta de curto prazo: 10 projetos/mês</li><li>Para escalar além: equipe de freelancers por demanda → fixos</li></ul></div>
+  <div class="card"><div class="ctitle"><i class="ti ti-receipt"></i>Custos operacionais mensais</div><ul><li><i class="ti ti-brand-figma" style="font-size:13px;vertical-align:-2px;margin-right:4px;color:var(--p1)"></i>Figma: ~$15–20/mês</li><li><i class="ti ti-search" style="font-size:13px;vertical-align:-2px;margin-right:4px;color:var(--p3)"></i>Ferramentas de prospecção (fase inicial): $0 com stack gratuito</li><li><i class="ti ti-robot" style="font-size:13px;vertical-align:-2px;margin-right:4px;color:var(--p4)"></i>Ferramentas de prospecção (fase de escala): $60–130/mês</li></ul></div>
+  <div class="tl-row">
+    <div class="tl-blk"><div class="tl-per"><i class="ti ti-calendar"></i>Mês 1–2</div><div class="tl-tit">Validação</div><ul><li>Primeiros 2–4 projetos fechados</li><li>Testar nichos e abordagens</li><li>Primeiros depoimentos</li></ul></div>
+    <div class="tl-blk"><div class="tl-per"><i class="ti ti-calendar"></i>Mês 3–4</div><div class="tl-tit">Tração</div><ul><li>5–7 projetos/mês</li><li>Automatizar prospecção</li><li>Ativar Instagram</li></ul></div>
+    <div class="tl-blk"><div class="tl-per"><i class="ti ti-calendar"></i>Mês 5–6</div><div class="tl-tit">Escala</div><ul><li>Meta de 10/mês atingida</li><li>Lançar Framer</li><li>Avaliar equipe</li></ul></div>
+  </div>
+</div>
+
+<!-- 15 CRESCIMENTO -->
+<div id="cresc" class="sec">
+  <div class="slabel"><i class="ti ti-plant"></i> 15 · Plano de Crescimento</div>
+  <div class="stitle">A visão de futuro</div>
+  <div class="sintro">De solo studio a estúdio escalável — com expansão de serviços, equipe e mercados.</div>
+  <div class="gph"><span class="gbadge gnow"><i class="ti ti-player-play"></i>Agora</span><div><div class="gtit">Fase 1 — Estabelecer no mercado americano</div><div class="gdesc">Foco total em design via Figma. Prospecção manual + semi-automatizada. Primeiros clientes, primeiros depoimentos, construção de reputação.</div></div></div>
+  <div class="gph"><span class="gbadge gsoon"><i class="ti ti-clock"></i>3–6 meses</span><div><div class="gtit">Fase 2 — Expansão com Framer</div><div class="gdesc">Adicionar desenvolvimento com Framer ao portfólio. Aumentar ticket médio e oferecer solução mais completa — design + implementação.</div></div></div>
+  <div class="gph"><span class="gbadge gsoon"><i class="ti ti-clock"></i>6–12 meses</span><div><div class="gtit">Fase 3 — Montagem de equipe</div><div class="gdesc">Com demanda estável em 10+ projetos/mês, contratar freelancers por demanda. Com consistência, migrar para equipe fixa.</div></div></div>
+  <div class="gph"><span class="gbadge gfut"><i class="ti ti-world"></i>Futuro</span><div><div class="gtit">Fase 4 — Expansão internacional</div><div class="gdesc">Após consolidação no mercado americano, explorar países com moedas valorizadas: Canadá, Reino Unido, Austrália.</div></div></div>
+  <div class="hl" style="margin-top:1.5rem"><span class="qm">"</span><p>O objetivo não é apenas ter mais projetos — é construir um estúdio que escale sem perder a essência que o torna único: o atendimento humano, a dedicação e o compromisso com o sucesso de cada cliente.</p></div>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+function show(id){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nbtn').forEach(b=>b.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  var ids=['visao','pos','merc','avatar','dores','nichos','oferta','preco','prosp','copy','funil','entrega','presenca','metas','cresc'];
+  document.querySelectorAll('.nbtn')[ids.indexOf(id)].classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
